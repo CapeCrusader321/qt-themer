@@ -1,0 +1,32 @@
+name: qt-themer
+version: '0.1'
+summary: Qt Themes Integrator
+description: | 
+   Themes Qt Snaps, Just an Initiative.
+confinement: strict
+compression: lzo
+grade: stable
+base: bare
+build-base: core22
+
+slots:
+    icon-themes:
+        interface: content
+        source:
+          read:
+           - "."
+parts:
+    qt-themes:
+        plugin: nil
+        stage-packages:
+          - qt5-style-plugins
+          - qt5-gtk2-platformtheme
+          - kde-style-qtcurve-qt5
+          - qt5-style-kvantum-themes
+          - breeze-cursor-theme
+          - kde-style-breeze
+          - lxqt-themes
+          - lxqt-system-theme
+          - lxqt-qtplugin
+          - adwaita-qt
+        
