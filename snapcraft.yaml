@@ -10,13 +10,13 @@ base: bare
 build-base: core22
 
 slots:
-    icon-themes:
+    qt-themer:
         interface: content
         source:
           read:
            - "."
 parts:
-    qt-themes:
+    qt-themer:
         plugin: nil
         stage-packages:
           - qt5-style-plugins
